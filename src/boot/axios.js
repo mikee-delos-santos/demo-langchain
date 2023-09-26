@@ -1,7 +1,7 @@
 import { boot } from 'quasar/wrappers'
 import axios from 'axios'
 
-const api = axios.create({ baseURL: process.env.API_URL })
+const api = axios.create({ baseURL: 'https://bunch-demo-mikee-internal.koyeb.app' })
 
 export default boot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
