@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bunch">
         <q-btn
           flat
           dense
@@ -10,12 +10,9 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
         <q-toolbar-title>
-          Quasar App
+          Bunch Demo
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -28,7 +25,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Demo actions
         </q-item-label>
 
         <EssentialLink
@@ -50,49 +47,24 @@ import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
+{
+    title: 'Home',
+    icon: 'home',
+    link: ''
+  },
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Add context',
+    caption: 'Add more context to LLMs through RAG',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'add_context'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Test Prompts',
+    caption: 'Chat with OpenAI',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'get_prompt'
   }
-];
+]
 
 export default defineComponent({
   name: 'MainLayout',
@@ -114,3 +86,8 @@ export default defineComponent({
   }
 });
 </script>
+<style>
+  .bunch {
+    background: #ee4c4d;
+  }
+</style>
